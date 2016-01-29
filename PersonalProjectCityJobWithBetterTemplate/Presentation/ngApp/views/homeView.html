@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <div class="col-md-3">
+        <form>
+            <input type="text" name="username" placeholder="Username" /><br />
+            <input type="password" name="password" placeholder="Password" />
+            <button type="submit" name="submit">Submit</button>
+        </form>
+    </div>
+    <div class="col-md-7">
+        <ul>
+            <li ng-repeat="article in controller.articles">
+                <div class="col-md-4" id="articlelist">
+                    {{article.title}}
+                </div>
+                <div class="col-md-8" id="articlelist">
+                    {{article.content}}
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
