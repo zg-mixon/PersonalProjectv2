@@ -1,8 +1,22 @@
 ﻿.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
-#navbar{
-    background-color: #8DBCE0;
+.navbar
+{
+    margin-bottom:10%;
 }
+
+.navbar-default {
+    background-color: #8DBCE0
+}
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+
+/*#navbar{
+    background-color: #8DBCE0;
+}*/
 
 #navbar1>ul>li>a {
     font-family: sans-serif;
@@ -34,7 +48,63 @@ ul
 }
 
 #jobimage {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 300px;
     border-radius:3px;
+}
+
+#cityimage {
+    height: auto;
+    width: 300px;
+    border-radius:3px;
+}
+
+#login .form-control {
+    width:60%;
+}
+
+#login {
+    margin-top:10%;
+    margin-left:5%
+}
+
+#username {
+    margin:1%;
+}
+
+#password {
+    margin: 1%;
+}
+
+#loginsubmit {
+    margin: 1% 
+}
+
+#registrationredirectxt {
+    margin-left:5%
+}
+
+#articleheader {
+    text-align:center;
+}
+
+#articles {
+    text-align:center
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vertical-center .form-control {
+    max-width: 300px;
+    margin: 5px 0;
+}
+form {
+    margin-bottom:0;
 }

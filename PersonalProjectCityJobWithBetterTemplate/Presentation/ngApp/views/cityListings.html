@@ -1,20 +1,19 @@
 ﻿<div class="row">
     <div class="col-md-offset-2 col-md-8 col-offset-2">
-        <div class="row"><h1 id="joblistingheadertxt" style="text-align:center">Jobs</h1></div>
+        <div class="row"><h1 id="joblistingheadertxt" style="text-align:center">Cities</h1></div>
         <div class="row">
             <ul>
-                <li ng-repeat="job in controller.jobs">
+                <li ng-repeat="city in controller.cities">
                     <div class="row">
-                        {{job.name}}
+                        {{city.name}}
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            {{job.description}}
+                            {{city.description}}
                         </div>
                         <div class="col-md-4">
-                            
-                            <img ng-src="{{job.pictureUrl}}" id="jobimage"/>
-                            <!--{{job.pictureUrl}}-->
+
+                            <img ng-src="{{city.pictureUrl}}" id="cityimage" />
                         </div>
                     </div>
                 </li>
@@ -22,5 +21,4 @@
         </div>
     </div>
 </div>
-                
-            
+

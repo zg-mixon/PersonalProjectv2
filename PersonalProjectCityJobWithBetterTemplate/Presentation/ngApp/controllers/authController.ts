@@ -1,14 +1,21 @@
 ﻿namespace PersonalProjectCityJobWithBetterTemplate.Controllers {
 
     export class AuthController {
+        
+        public articles;
 
         constructor(private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
+                
+        
 
+       
+        
         public register(user): void {
 
             this.$http.post('/api/account/register', user)
                 .then((response) => {
-                    console.log('Registered a new user!');
+                    console.log('Registered a new user!')
+                    this.$location.path('/');
                 })
                 .catch((response) => {
                     console.log(response);

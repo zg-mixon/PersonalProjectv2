@@ -1,15 +1,23 @@
 ﻿<div class="row">
     <div class="col-md-3">
-        <form>
-            <input type="text" name="username" placeholder="Username" /><br />
-            <input type="password" name="password" placeholder="Password" />
-            <button type="submit" name="submit">Submit</button>
+        <form id="login" ng-submit="controller.login(userName, password)">
+            <h2 style="margin-left:2%">Login</h2>
+            <input type="text" name="username" placeholder="Username" class="form-control" id="username" ng-model="userName" />
+            <input type="password" name="password" placeholder="Password" class="form-control" id="password" ng-model="password" />
+            <button type="submit" name="submit" id="loginsubmit">Submit</button>
         </form>
+        </>
+        <p id="registrationredirectxt">
+            Don't have an account? <br />
+            <a href="/#/register">Click here</a> to create one!
+        </p>
+
     </div>
     <div class="col-md-7">
-        <ul>
-            <li ng-repeat="article in controller.articles">
-                <div class="col-md-4" id="articlelist">
+        <h1 id="articleheader">Articles!</h1>
+        <ul style="text-align:center">
+            <li ng-repeat="article in controller.articles" id="articles">
+                <div class="col-md-4" id="articlelist" style="text-align:center">
                     {{article.title}}
                 </div>
                 <div class="col-md-8" id="articlelist">

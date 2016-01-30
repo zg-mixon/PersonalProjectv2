@@ -1,6 +1,7 @@
 ﻿namespace PersonalProjectCityJobWithBetterTemplate {
     
     angular.module('PersonalProjectCityJobWithBetterTemplate', ['ngRoute']);
+    //angular.module('PersonalProjectCityJobWithBetterTemplate', ['ui.bootstrap']);
 
     angular.module('PersonalProjectCityJobWithBetterTemplate').factory('authInterceptor',
         ($q: ng.IQService, $window: ng.IWindowService, $location: ng.ILocationService) => {
@@ -35,6 +36,16 @@
             $routeProvider.when('/jobs', {
                 templateUrl: '/Presentation/ngApp/views/jobListings.html',
                 controller: PersonalProjectCityJobWithBetterTemplate.Controllers.jobListingsController,
+                controllerAs: 'controller'
+            })
+            $routeProvider.when('/cities', {
+                templateUrl: '/Presentation/ngApp/views/cityListings.html',
+                controller: PersonalProjectCityJobWithBetterTemplate.Controllers.CityListingsController,
+                controllerAs: 'controller'
+            })
+            $routeProvider.when('/register', {
+                templateUrl: '/Presentation/ngApp/views/registration.html',
+                controller: PersonalProjectCityJobWithBetterTemplate.Controllers.AuthController,
                 controllerAs: 'controller'
             });
         });
