@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="col-md-offset-2 col-md-8 col-offset-2">
+        <div class="row"><h1 id="joblistingheadertxt" style="text-align:center">Job Listings</h1></div>
+        <div class="row">
+            <ul>
+                <li ng-repeat="job in controller.jobs">
+                    <div class="row">
+                        {{job.name}}
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{job.description}}
+                        </div>
+                        <div class="col-md-4">
+                            
+                            <img ng-src="{{job.pictureUrl}}" id="jobimage"/>
+                            <!--{{job.pictureUrl}}-->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                
+            

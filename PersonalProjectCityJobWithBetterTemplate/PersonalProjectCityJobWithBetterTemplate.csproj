@@ -211,6 +211,7 @@
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\ArticleRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Infrastructure\JobRepository.cs" />
     <Compile Include="Migrations\201601281905292_initial.cs" />
     <Compile Include="Migrations\201601281905292_initial.Designer.cs">
       <DependentUpon>201601281905292_initial.cs</DependentUpon>
@@ -223,6 +224,10 @@
     <Compile Include="Migrations\201601281918246_added dates to articles.Designer.cs">
       <DependentUpon>201601281918246_added dates to articles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601291547320_added description for job model.cs" />
+    <Compile Include="Migrations\201601291547320_added description for job model.Designer.cs">
+      <DependentUpon>201601291547320_added description for job model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\ArticlesController.cs" />
@@ -230,6 +235,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Controllers\JobsController.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -237,6 +243,8 @@
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
     <Compile Include="Services\ArticleDTO.cs" />
     <Compile Include="Services\ArticleService.cs" />
+    <Compile Include="Services\JobDTO.cs" />
+    <Compile Include="Services\JobService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -257,6 +265,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
+    <Content Include="Presentation\ngApp\views\jobListings.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -306,6 +315,9 @@
     <EmbeddedResource Include="Migrations\201601281918246_added dates to articles.resx">
       <DependentUpon>201601281918246_added dates to articles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601291547320_added description for job model.resx">
+      <DependentUpon>201601291547320_added description for job model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -316,6 +328,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\HomeController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\jobListingsController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

@@ -31,6 +31,11 @@
                 templateUrl: '/Presentation/ngApp/views/homeView.html',
                 controller: PersonalProjectCityJobWithBetterTemplate.Controllers.HomeController,
                 controllerAs: 'controller'
+            })
+            $routeProvider.when('/jobs', {
+                templateUrl: '/Presentation/ngApp/views/jobListings.html',
+                controller: PersonalProjectCityJobWithBetterTemplate.Controllers.jobListingsController,
+                controllerAs: 'controller'
             });
         });
 }

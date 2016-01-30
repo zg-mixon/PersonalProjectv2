@@ -32,3 +32,9 @@ ul
 #articlelist {
     margin: 15px 15px 15px 15px;
 }
+
+#jobimage {
+    height: 200px;
+    width: auto;
+    border-radius:3px;
+}

@@ -14,6 +14,7 @@ namespace PersonalProjectCityJobWithBetterTemplate.Infrastructure
 
         public IQueryable<Article> GetArticles() {
             return from a in Table
+                   where a.Active
                    orderby a.CreatedDate descending
                    select a;
         }

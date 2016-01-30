@@ -23,6 +23,8 @@ namespace PersonalProjectCityJobWithBetterTemplate.Domain
 
         public ApplicationUser AU { get; set; }
 
+        public string Description { get; set; }
+
         public bool Active { get; set; } = true;
     }
 }
