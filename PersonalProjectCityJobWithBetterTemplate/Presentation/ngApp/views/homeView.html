@@ -1,17 +1,19 @@
 ﻿<div class="row">
-    <div class="col-md-3">
-        <form id="login" ng-submit="controller.login(userName, password)">
-            <h2 style="margin-left:2%">Login</h2>
-            <input type="text" name="username" placeholder="Username" class="form-control" id="username" ng-model="userName" />
-            <input type="password" name="password" placeholder="Password" class="form-control" id="password" ng-model="password" />
-            <button type="submit" name="submit" id="loginsubmit">Submit</button>
-        </form>
-        </>
-        <p id="registrationredirectxt">
-            Don't have an account? <br />
-            <a href="/#/register">Click here</a> to create one!
-        </p>
+    <div class="col-md-3" ng-controller="AuthController as auth" >
+        <div ng-if="!auth.isLoggedIn">
+            <form id="login" ng-submit="auth.login(userName, password)">
+                <h2 style="margin-left:2%">Login</h2>
+                <input type="text" name="username" placeholder="Username" class="form-control" id="username" ng-model="userName" />
+                <input type="password" name="password" placeholder="Password" class="form-control" id="password" ng-model="password" />
+                <button type="submit" name="submit" id="loginsubmit">Submit</button>
+            </form>
 
+            </>
+            <p id="registrationredirectxt">
+                Don't have an account? <br />
+                <a href="/#/register">Click here</a> to create one!
+            </p>
+        </div>
     </div>
     <div class="col-md-7">
         <h1 id="articleheader">Articles!</h1>

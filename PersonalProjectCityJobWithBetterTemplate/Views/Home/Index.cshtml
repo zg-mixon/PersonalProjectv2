@@ -15,11 +15,12 @@
         <nav class="navbar navbar-default navbar-fixed-top">
 
 
-            <div id="navbar1" class="col-md-9">
+            <div id="navbar1" class="col-md-9" ng-controller="AuthController as auth">
                 <ul class="nav nav-pills navbar-collapse collapse" style="margin-left:1%">
                     <li role="presentation"><a href="/#/">Home</a></li>
                     <li role="presentation"><a href="/#/jobs">Jobs</a></li>
                     <li role="presentation"><a href="/#/cities">Cities</a></li>
+                    <li ng-if="auth.isLoggedIn"><a href="/#/profile">Profile</a></li>
                 </ul>
 
             </div>

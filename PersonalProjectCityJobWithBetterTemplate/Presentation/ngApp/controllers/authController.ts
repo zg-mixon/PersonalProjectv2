@@ -40,7 +40,11 @@
         public logout() {
             this.$window.localStorage.removeItem('token');
         }
+
+        get isLoggedIn() {
+            return this.$window.localStorage.getItem('token'); 
+        }
     }
 
-    angular.module('PersonalProjectCityJobWithBetterTemplate').controller('authController', AuthController);
+    angular.module('PersonalProjectCityJobWithBetterTemplate').controller('AuthController', AuthController);
 }
